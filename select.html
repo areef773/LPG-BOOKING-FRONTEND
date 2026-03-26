@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Gas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Select State & Gas</h2>
+
+  <select id="state">
+    <option>Uttar Pradesh</option>
+    <option></option>
+  </select><br>
+
+  <select id="gas">
+    <option>HP Gas</option>
+    <option>Indian Gas</option>
+    <option>Bharat Gas</option>
+  </select><br>
+
+  <button onclick="goNext()">Continue</button>
+</div>
+
+<script>
+function goNext() {
+  let gas = document.getElementById("gas").value;
+  localStorage.setItem("gas", gas);
+  window.location.href = "form.html";
+}
+</script>
+
+</body>
+</html>

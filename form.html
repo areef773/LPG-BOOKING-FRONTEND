@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Gas Booking Form</h2>
+
+  <input type="text" id="name" placeholder="Full Name"><br>
+  <input type="text" id="address" placeholder="Address"><br>
+  <input type="text" id="mobile" placeholder="Mobile"><br>
+  <input type="number" id="cylinder" placeholder="Cylinders"><br>
+
+  <button onclick="submitForm()">Submit</button>
+</div>
+
+<script>
+function submitForm() {
+  localStorage.setItem("name", document.getElementById("name").value);
+  localStorage.setItem("address", document.getElementById("address").value);
+  localStorage.setItem("mobile", document.getElementById("mobile").value);
+  localStorage.setItem("cylinder", document.getElementById("cylinder").value);
+
+  window.location.href = "receipt.html";
+}
+</script>
+
+</body>
+</html>
